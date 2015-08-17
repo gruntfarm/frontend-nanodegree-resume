@@ -1,0 +1,19 @@
+"schools": [
+        {
+            "name":"",
+            "city":"",
+            "degree":"",
+            "majors":[""],
+            "year":"",
+            "url":""
+        }
+    ]
+    "onlineCourses": [
+        {
+            "course": "",
+            "school":"",
+            "url":"",
+            "year":""
+
+        }
+    ]

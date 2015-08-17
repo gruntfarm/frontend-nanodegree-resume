@@ -1,0 +1,6 @@
+"name": name,
+    "role": role,
+    "contact": contact,
+    "picture": picture,
+    "welcomeMessage": welcome,
+    "skills": skills
