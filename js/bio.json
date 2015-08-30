@@ -1,6 +1,12 @@
-"name": name,
-    "role": role,
-    "contact": contact,
-    "picture": picture,
-    "welcomeMessage": welcome,
-    "skills": skills
+"name": "Mladen Kovacevic",
+    "role": "Digital Product Samurai",
+    "contact": [
+        "mobile":"416-906-1722",
+        "email":"mladen.kovacevic@gmail.com",
+        "github":"http://www.github.com/gruntfarm",
+        "twitter":"http://www.twitter.com/vrshift",
+        "location":"Toronto, Ontario"
+    ]
+    "picture": "https://pbs.twimg.com/profile_images/442474686169899008/Bb5ejYI2_400x400.jpeg",
+    "welcomeMessage": "Welcome to my dojo",
+    "skills": ["Light Saber", "Using the Force", "Android Maintenance", "Spaceship Piloting"]
