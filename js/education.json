@@ -1,19 +1,26 @@
 "schools": [
-        {
-            "name":"",
-            "city":"",
-            "degree":"",
-            "majors":[""],
-            "year":"",
-            "url":""
-        }
-    ]
-    "onlineCourses": [
-        {
-            "course": "",
-            "school":"",
-            "url":"",
-            "year":""
-
-        }
-    ]
+    {
+        "name":"York University",
+        "city":"Toronto, Ontario",
+        "degree":"Bachelor of Fine Arts",
+        "majors":["Film Studies"],
+        "year":2004,
+        "url":"http://www.yorku.ca"
+    },
+    {
+        "name":"Jedi Academy",
+        "city":"Tatooine",
+        "degree":"Light Side",
+        "majors":["Telekinesis"],
+        "year":2015,
+        "url":"http://www.starwars.com"
+    }
+],
+"onlineCourses": [
+    {
+        "course": "Front End Web Development Nanodegree",
+        "school":"Udacity",
+        "url":"http://www.udacity.com",
+        "year":2015
+    }
+]
