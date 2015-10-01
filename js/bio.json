@@ -10,3 +10,16 @@
     "picture": "https://pbs.twimg.com/profile_images/442474686169899008/Bb5ejYI2_400x400.jpeg",
     "welcomeMessage": "Welcome to my dojo",
     "skills": ["Light Saber", "Using the Force", "Android Maintenance", "Spaceship Piloting"]
+
+
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+    var formattedEmail = HTMLemail.replace("%data%", bio.contact.email);
+    var formattedTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
+    var formattedGithub = HTMLgithub.replace("%data%", bio.contact.github);
+    var formattedBlog = HTMLblog.replace("%data%", bio.contact.blog);
+    var formattedLocation = HTMLlocation.replace("%data%", bio.contact.location);
+    var formattedContact = formattedMobile + formattedEmail + formattedTwitter + formattedGithub + formattedBlog + formattedLocation;
+
+    var formattedtopContacts = HTMLcontactGeneric.replace("%contact%", formattedContact);
+
+    $("#topContacts:last").append(formattedtopContacts);
