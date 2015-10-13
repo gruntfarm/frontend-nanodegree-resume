@@ -4,17 +4,17 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var bio = {
     "name": "Mladen Kovacevic",
-    "role": "Digital Marketing Manager",
-    "contact": {
+    "role": "Front-End Samurai Jedi",
+    "contacts": {
         "mobile": "416-906-1722",
         "email": "mladen.kovacevic@gmail.com",
         "github": "gruntfarm",
         "twitter": "@vrshift",
-        "location": "Toronto"
+        "location": "Toronto, Ontario"
     },
     "picture": "https://pbs.twimg.com/profile_images/442474686169899008/Bb5ejYI2_400x400.jpeg",
     "welcomeMessage": "Welcome to my dojo",
-    "skills": ["Light Saber", "Using the Force", "Android Maintenance", "Spaceship Piloting"]
+    "skills": ["Light Saber", "Using the Force", "Android Maintenance", "Spaceship Piloting", "Javascript"]
 }
 var work = {
     "jobs": [
@@ -42,13 +42,13 @@ var projects = {
             "title": "Crestbound",
             "dates": "2012-2015",
             "description": "Crestbound website",
-            "images": [""]
+            "images": ["https://pbs.twimg.com/profile_images/631535425333518336/D-i_GqpT.jpg"]
         },
         {
             "title": "VRshift",
             "dates": "2015",
             "description": "VRshift - VR news site",
-            "images": [""]
+            "images": ["http://i.ytimg.com/vi/ngElkyQ6Rhs/hqdefault.jpg"]
         }
     ]
 }
@@ -57,7 +57,7 @@ var education = {
     "schools": [
     {
         "name":"York University",
-        "city":"Toronto, Ontario",
+        "location":"Toronto, Ontario",
         "degree":"Bachelor of Fine Arts",
         "majors":["Film Studies"],
         "year":2004,
@@ -65,9 +65,9 @@ var education = {
     },
     {
         "name":"Jedi Academy",
-        "city":"Tatooine, Galaxy far far away",
+        "location":"Skywalker Ranch, California",
         "degree":"Light Side",
-        "majors":["Telekinesis", "Kickin' Sith Ass"],
+        "majors":["Holochess", "Kickin' Sith Ass"],
         "year":2015,
         "url":"http://www.starwars.com"
     }
@@ -95,8 +95,8 @@ bio.display = function() {
     $("#header").append(formattedWelcomeMsg);
 
 
-    for (item in bio.contact) {
-        var formattedContact = HTMLcontactGeneric.replace("%contact%", item).replace("%data%", bio.contact[item]);
+    for (item in bio.contacts) {
+        var formattedContact = HTMLcontactGeneric.replace("%contact%", item).replace("%data%", bio.contacts[item]);
 
         $("#topContacts:last").append(formattedContact);
     }
@@ -145,9 +145,16 @@ projects.display = function() {
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.project[project].description);
         $(".project-entry:last").append(formattedProjectDescription);
 
-        var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.project[project].images);
-        $(".project-entry:last").append(formattedProjectImage);
 
+        if (projects.project[project].images != null) {
+
+            for (image in projects.project[project].images) {
+
+                var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.project[project].images[image]);
+                $(".project-entry:last").append(formattedProjectImage);
+
+            }
+        }
     }
 }
 
@@ -158,8 +165,8 @@ education.display = function() {
         var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
         $(".education-entry:last").append(formattedSchoolName);
 
-        var formattedSchoolCity = HTMLschoolLocation.replace("%data%", education.schools[school].city);
-        $(".education-entry:last").append(formattedSchoolCity);
+        var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+        $(".education-entry:last").append(formattedSchoolLocation);
 
 
         var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
@@ -168,9 +175,15 @@ education.display = function() {
         var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].year);
         $(".education-entry:last").append(formattedSchoolDates);
 
-        var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
-        $(".education-entry:last").append(formattedSchoolMajor);
+        if (education.schools[school].majors != null) {
 
+            for (major in education.schools[school].majors) {
+
+                var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+                $(".education-entry:last").append(formattedSchoolMajor);
+
+            }
+        }
     }
 
     for (course in education.onlineCourses) {
@@ -191,6 +204,11 @@ education.display = function() {
     }
 }
 
+
+$("#mapDiv").append(googleMap);
+
+
+
 $(document).click(function(loc) {
     var x = loc.pageX;
     var y = loc.pageY;
@@ -202,3 +220,4 @@ bio.display();
 work.display();
 projects.display();
 education.display();
+//map.display();
