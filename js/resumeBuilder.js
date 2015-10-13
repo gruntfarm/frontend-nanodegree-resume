@@ -4,7 +4,7 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var bio = {
     "name": "Mladen Kovacevic",
-    "role": "Front-End Samurai Jedi",
+    "role": "Front-End Jedi",
     "contacts": {
         "mobile": "416-906-1722",
         "email": "mladen.kovacevic@gmail.com",
@@ -187,7 +187,7 @@ education.display = function() {
     }
 
     for (course in education.onlineCourses) {
-        $(".education-entry:last").append(HTMLonlineClasses);
+        $("#education").append(HTMLonlineClasses);
 
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].course);
         $(".education-entry:last").append(formattedOnlineTitle);

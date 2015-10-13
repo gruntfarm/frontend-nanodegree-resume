@@ -92,6 +92,10 @@ a {
   display: block;
 }
 
+.role {
+  color: #D2DBFF;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
@@ -118,7 +122,7 @@ a {
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: #F4F8FF;
   padding-bottom: 10px;
   clear:both;
 }
@@ -129,7 +133,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #3D526A;
 }
 
 .flex-box {
@@ -192,6 +196,7 @@ span {
   .welcome-message {
     display: none;
   }
+
 }
 
 #map {
