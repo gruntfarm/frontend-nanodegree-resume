@@ -14,13 +14,13 @@ var bio = {
     },
     "picture": "https://pbs.twimg.com/profile_images/442474686169899008/Bb5ejYI2_400x400.jpeg",
     "welcomeMessage": "Welcome to my dojo",
-    "skills": ["Light Saber", "Using the Force", "Android Maintenance", "Spaceship Piloting", "Javascript"]
+    "skills": ["Light Saber Maintenance", "Using the Force", "Android Cleaning", "Speeder Racing", "Javascript"]
 }
 var work = {
     "jobs": [
         {
             "employer": "Glacier Media Group",
-            "title": "Marketing manager",
+            "title": "Marketing Manager",
             "location": "Toronto, Ontario",
             "dates": "2008-2015",
             "description": "Revenue growth generation and customer nurturing achieved via careful planning, execution and analysis across a number of marketing channels. Lead in SEO optimization analysis and consulting (keyword and taxonomy strategy, back-linking expansion, reporting and guidance). Execution of all pay-per-click campaigns (Bing, Google, Facebook, Linkedin, Twitter). Development and maintenance of full e-mail marketing program reaching over 60K customers and prospects (list selection, segmentation, design, content curation, deployment and analysis ). Full-stack management of content marketing, landing pages and special promotions",
@@ -190,16 +190,15 @@ education.display = function() {
         $("#education").append(HTMLonlineClasses);
 
         var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].course);
-        $(".education-entry:last").append(formattedOnlineTitle);
 
         var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-        $(".education-entry:last").append(formattedOnlineSchool);
+        $("#education").append(formattedOnlineTitle + formattedOnlineSchool);
 
         var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-        $(".education-entry:last").append(formattedOnlineURL);
+        $("#education").append(formattedOnlineURL);
 
         var formattedOnlineYear = HTMLonlineDates.replace("%data%", education.onlineCourses[course].year);
-        $(".education-entry:last").append(formattedOnlineYear);
+        $("#education").append(formattedOnlineYear);
 
     }
 }
