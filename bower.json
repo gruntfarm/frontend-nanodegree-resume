@@ -1,0 +1,23 @@
+{
+  "name": "nanodegree-resume",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gruntfarm/frontend-nanodegree-resume",
+  "authors": [
+    "Mladen Kovacevic <mladen.kovacevic@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0",
+    "paper-fab": "PolymerElements/paper-fab#~1.0.5"
+  }
+}

@@ -47,6 +47,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Google Map to your resume!
   -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link href="bower_components/iron-icons/iron-icons.html" rel="import">
+  <link href="bower_components/paper-fab/paper-fab.html" rel="import">
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -82,7 +85,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       </ul>
     </div>
   </div>
-
+  <paper-fab icon="favorite"></paper-fab>
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
